@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Christian Merino · Programador junior</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="tailwind-config.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="selection:bg-spidey-neon selection:text-white antialiased font-sans relative overflow-x-hidden">
+
+<!-- Iconos reutilizables -->
+<svg width="0" height="0" class="absolute" aria-hidden="true">
+  <symbol id="spider" viewBox="0 0 24 24"><path d="M12 2C11.5 2 11 2.4 11 3V5.1C9.6 5.4 8.3 6.1 7.2 7.1L5.6 5.5C5.2 5.1 4.6 5.1 4.2 5.5C3.8 5.9 3.8 6.5 4.2 6.9L5.8 8.5C5.3 9.6 5 10.8 5 12.1H2.9C2.4 12.1 2 12.5 2 13C2 13.5 2.4 14 2.9 14H5C5 15.3 5.3 16.5 5.8 17.6L4.2 19.2C3.8 19.6 3.8 20.2 4.2 20.6C4.6 21 5.2 21 5.6 20.6L7.2 19C8.3 20 9.6 20.7 11 21V23.1C11 23.6 11.5 24 12 24C12.5 24 13 23.6 13 23.1V21C14.4 20.7 15.7 20 16.8 19L18.4 20.6C18.8 21 19.4 21 19.8 20.6C20.2 20.2 20.2 19.6 19.8 19.2L18.2 17.6C18.7 16.5 19 15.3 19 14H21.1C21.6 14 22 13.5 22 13C22 12.5 21.6 12.1 21.1 12.1H19C19 10.8 18.7 9.6 18.2 8.5L19.8 6.9C20.2 6.5 20.2 5.9 19.8 5.5C19.4 5.1 18.8 5.1 18.4 5.5L16.8 7.1C15.7 6.1 14.4 5.4 13 5.1V3C13 2.4 12.5 2 12 2ZM12 7C14.8 7 17 9.2 17 12C17 14.8 14.8 17 12 17C9.2 17 7 14.8 7 12C7 9.2 9.2 7 12 7ZM10.5 9.5C9.7 9.5 9 10.2 9 11C9 11.8 9.7 12.5 10.5 12.5C11.3 12.5 12 11.8 12 11C12 10.2 11.3 9.5 10.5 9.5ZM13.5 9.5C12.7 9.5 12 10.2 12 11C12 11.8 12.7 12.5 13.5 12.5C14.3 12.5 15 11.8 15 11C15 10.2 14.3 9.5 13.5 9.5Z"/></symbol>
+  <symbol id="arrow" viewBox="0 0 20 20"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"/></symbol>
+</svg>
+
+<!-- Telaraña de fondo -->
+<div aria-hidden="true" class="pointer-events-none fixed inset-0 z-0 overflow-hidden opacity-20"><svg class="w-full h-full" fill="none" viewBox="0 0 1440 900" xmlns="http://www.w3.org/2000/svg"><g opacity="0.85" stroke="#ff1a40" stroke-width="1"><circle cx="260" cy="145" r="45"/><circle cx="260" cy="145" r="95"/><circle cx="260" cy="145" r="160"/><circle cx="260" cy="145" r="235"/><circle cx="260" cy="145" r="320"/><circle cx="260" cy="145" r="415" stroke-dasharray="4 4"/><circle cx="260" cy="145" r="520" stroke-dasharray="2 4"/><line x1="260" y1="145" x2="260" y2="-80"/><line x1="260" y1="145" x2="260" y2="750"/><line x1="260" y1="145" x2="-120" y2="145"/><line x1="260" y1="145" x2="780" y2="145"/><line x1="260" y1="145" x2="-90" y2="-90"/><line x1="260" y1="145" x2="620" y2="-90"/><line x1="260" y1="145" x2="660" y2="500"/><line x1="260" y1="145" x2="-110" y2="480"/><line x1="260" y1="145" x2="40" y2="-60"/><line x1="260" y1="145" x2="480" y2="-60"/><line x1="260" y1="145" x2="720" y2="20"/><line x1="260" y1="145" x2="520" y2="550"/><path d="M-20 60 Q 260 20 540 60" stroke="#e23636" stroke-width="0.8"/><path d="M-40 230 Q 260 270 560 230" stroke="#e23636" stroke-width="0.8"/><path d="M-30 330 Q 260 380 570 330" stroke="#e23636" stroke-width="0.8"/><path d="M-50 440 Q 260 510 590 440" stroke="#e23636" stroke-width="0.8"/><circle cx="260" cy="145" r="4" fill="#ff1a40"/></g><g opacity="0.35" stroke="#ef233c" stroke-width="0.8"><circle cx="1320" cy="140" r="50"/><circle cx="1320" cy="140" r="110"/><circle cx="1320" cy="140" r="180"/><circle cx="1320" cy="140" r="260" stroke-dasharray="3 3"/><line x1="1320" y1="140" x2="980" y2="-20"/><line x1="1320" y1="140" x2="980" y2="140"/><line x1="1320" y1="140" x2="1040" y2="320"/><line x1="1320" y1="140" x2="1160" y2="460"/><line x1="1320" y1="140" x2="1320" y2="500"/><circle cx="1320" cy="140" r="2.5" fill="#ef233c"/></g></svg></div>
+
+<!-- Luz del cursor -->
+<div class="pointer-events-none fixed inset-0 z-30 opacity-60" id="cursor-glow"></div>
+
+<div class="mx-auto min-h-screen max-w-screen-xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0 relative z-10">
+<div class="lg:flex lg:justify-between lg:gap-12">
+
+  <!-- ========== COLUMNA IZQUIERDA ========== -->
+  <header class="sidebar lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:overflow-y-auto lg:py-10">
+    <div>
+      
+
+      <h1 class="text-4xl sm:text-5xl tracking-tight text-white flex items-center gap-3">
+        <span>Christian Merino</span>
+        <span class="inline-block w-2.5 h-2.5 rounded-full bg-spidey-neon shadow-[0_0_12px_#ff1a40]"></span>
+      </h1>
+      <h2 class="mt-3 text-lg font-semibold text-slate-200 sm:text-xl">Programador junior</h2>
+      <p class="intro mt-4 max-w-xs text-sm leading-relaxed text-slate-400">
+        Persona trabajadora que disfruta el trabajo en equipo, con buena comunicación y muchas ganas de lograr siempre lo mejor.
+      </p>
+
+      <nav aria-label="Secciones" class="hidden lg:block">
+        <ul class="w-max space-y-1 mt-6">
+          <li><a class="nav-link group flex items-center py-2 active" href="#about"><span class="nav-indicator mr-4 h-px w-8 bg-slate-600 group-hover:w-16 group-hover:bg-spidey-red"></span><span class="nav-text text-sm font-semibold text-slate-400 group-hover:text-slate-100">Sobre mí</span></a></li>
+          <li><a class="nav-link group flex items-center py-2" href="#experience"><span class="nav-indicator mr-4 h-px w-8 bg-slate-600 group-hover:w-16 group-hover:bg-spidey-red"></span><span class="nav-text text-sm font-semibold text-slate-400 group-hover:text-slate-100">Mis habilidades</span></a></li>
+          <li><a class="nav-link group flex items-center py-2" href="#projects"><span class="nav-indicator mr-4 h-px w-8 bg-slate-600 group-hover:w-16 group-hover:bg-spidey-red"></span><span class="nav-text text-sm font-semibold text-slate-400 group-hover:text-slate-100">Proyectos</span></a></li>
+          <li><a class="nav-link group flex items-center py-2" href="#education"><span class="nav-indicator mr-4 h-px w-8 bg-slate-600 group-hover:w-16 group-hover:bg-spidey-red"></span><span class="nav-text text-sm font-semibold text-slate-400 group-hover:text-slate-100">Estudios</span></a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="mt-8 space-y-3 lg:mt-6">
+      <!-- Cambio de traje -->
+      <div class="flex items-center justify-between">
+        <button id="suit-toggle-btn" type="button" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs text-neutral-400 bg-neutral-900/80 border border-neutral-800 hover:border-red-500/50 hover:text-red-400 transition-all duration-300 group backdrop-blur-sm active:scale-95">
+          <span class="relative flex h-1.5 w-1.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-spidey-neon opacity-75"></span><span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-spidey-red"></span></span>
+          <span id="suit-mode-badge">Identidad en espera</span>
+          <span id="suit-switch-action" class="text-[11px] text-neutral-500 group-hover:text-spidey-neon font-semibold">Cambiar</span>
+        </button>
+        
+      </div>
+
+      <!-- Tocadiscos conectado a YouTube -->
+      <div id="turntable-deck" class="rounded-xl border border-slate-800/90 bg-gradient-to-b from-slate-900/90 to-spidey-black p-3 backdrop-blur-md shadow-xl">
+        <div class="flex items-center gap-3">
+          <div id="vinyl-disc" title="Reproducir / pausar" class="relative w-14 h-14 flex-shrink-0 flex items-center justify-center cursor-pointer">
+            <div class="vinyl-disc groove-rings w-14 h-14 rounded-full border border-slate-800/80 flex items-center justify-center relative">
+              <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-transparent via-white/10 to-transparent pointer-events-none"></div>
+              <div class="w-5 h-5 rounded-full bg-spidey-red border border-spidey-ruby flex items-center justify-center z-10">
+                <svg class="w-3 h-3 text-white" fill="currentColor"><use href="#spider"/></svg>
+              </div>
+              <div class="absolute w-1 h-1 rounded-full bg-slate-900 z-20"></div>
+            </div>
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center justify-between text-[11px]">
+              <span class="text-spidey-neon font-bold">Spider-Beats</span>
+              <span class="text-slate-500" id="player-status-badge">Cargando…</span>
+            </div>
+            <h4 class="text-sm font-semibold text-white truncate">Sunflower (Spider-Verse)</h4>
+            <p class="text-xs text-slate-400 truncate">Post Malone, Swae Lee</p>
+            <div class="mt-1.5 space-y-1">
+              <div id="progress-bar-container" class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden cursor-pointer">
+                <div id="track-progress" class="bg-gradient-to-r from-spidey-red to-spidey-neon h-full w-0"></div>
+              </div>
+              <div class="flex justify-between text-[10px] text-slate-500"><span id="current-time">00:00</span><span id="total-time">--:--</span></div>
+            </div>
+          </div>
+          <button id="play-toggle-btn" title="Reproducir / pausar" class="w-8 h-8 rounded-full bg-spidey-ruby hover:bg-spidey-neon text-white flex-shrink-0 flex items-center justify-center shadow-lg active:scale-95">
+            <svg id="play-icon" class="w-4 h-4 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            <svg id="pause-icon" class="w-4 h-4 hidden" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+          </button>
+        </div>
+        <a id="yt-link" href="https://www.youtube.com/watch?v=ApXoWvfEYVU" target="_blank" rel="noopener" class="hidden mt-2 text-[11px] text-sky-400 hover:underline">Abrir en YouTube</a>
+      </div>
+
+      <!-- Redes -->
+      <div class="flex items-center gap-6">
+        <a href="#github" title="GitHub" class="group text-slate-400 hover:text-spidey-neon p-1"><svg class="h-6 w-6 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg></a>
+        <a href="#linkedin" title="LinkedIn" class="group text-slate-400 hover:text-spidey-neon p-1"><svg class="h-6 w-6 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+        <div class="ml-auto hidden sm:flex items-center gap-2 border border-emerald-500/30 bg-emerald-950/20 px-2.5 py-1 rounded text-[11px] text-emerald-400">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span><span>Aprendiendo: ...68%</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== COLUMNA DERECHA ========== -->
+  <main class="pt-24 lg:w-1/2 lg:py-24 space-y-24">
+
+    <!-- Sobre mí + contacto -->
+    <section id="about" class="scroll-mt-16 lg:scroll-mt-24">
+      <h2 class="title-serif text-3xl text-white mb-4 lg:sr-only">Sobre mí</h2>
+      <div class="space-y-4 text-slate-400 leading-relaxed text-[15px]">
+        <p>Soy una persona bastante trabajadora, que disfruta el trabajo en grupo manteniendo una excelente comunicación, abierta y con ánimos de lograr siempre lo mejor.</p>
+        <p>Me gusta aprender cosas nuevas y ponerlas en práctica, me considero una persona con buena capacidad de aprendizaje y con muchas ganas de crecer profesionalmente.</p>
+          <li>Vocación por el servicio</li>
+          <li>Disponibilidad total</li>
+          <li>Aprendizaje rápido</li>
+        </ul>
+        <ul class="pt-4 space-y-1 text-sm text-slate-300">
+          <li>+503 7957 8760</li>
+          <li>cmanuelmer03@gmail.com</li>
+          <li>San Salvador, El Salvador</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Experiencia -->
+    <section id="experience" class="scroll-mt-16 lg:scroll-mt-24">
+      <h2 class="title-serif text-3xl text-white mb-4 lg:sr-only">Mis puntos fuertes</h2>
+      <ol class="group/list space-y-12">
+        <li>
+          <div class="hover-card group relative p-4 rounded-xl border border-transparent lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+            <h3 class="font-semibold text-slate-200 text-base flex items-baseline">Programador ASP.NET <svg class="ml-1 h-4 w-4" fill="currentColor"><use href="#arrow"/></svg></h3>
+            <p class="text-sm text-sky-400 mt-1"></p>
+            <ul class="mt-2 text-sm leading-normal text-slate-400 space-y-1">
+              <li>– Elaboración de una interfaz limpia, funcional y atractiva para el portal interno.</li>
+              <li>– Elaboración de un sistema de login y registro.</li>
+              <li>– Capacidad para realizar funcionalidades complejas.</li>
+              <li>– Buen dominio de queries SQL en Supabase.</li>
+            </ul>
+            <ul class="mt-3 flex flex-wrap gap-1.5"><li class="pill">ASP.NET</li><li class="pill">C#</li><li class="pill">SQL</li><li class="pill">Supabase</li></ul>
+          </div>
+        </li>
+        <li>
+          <div class="hover-card group relative p-4 rounded-xl border border-transparent lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+            <h3 class="font-semibold text-slate-200 text-base flex items-baseline">Programador web con PHP y JS <svg class="ml-1 h-4 w-4" fill="currentColor"><use href="#arrow"/></svg></h3>
+            <p class="text-sm text-sky-400 mt-1"></p>
+            <ul class="mt-2 text-sm leading-normal text-slate-400 space-y-1">
+              <li>– Elaboración de back-end.</li>
+              <li>– Elaboración de base de datos con SQL.</li>
+              <li>– Elaboración de conexiones con PHP.</li>
+            </ul>
+            <ul class="mt-3 flex flex-wrap gap-1.5"><li class="pill">PHP</li><li class="pill">JavaScript</li><li class="pill">SQL</li></ul>
+          </div>
+        </li>
+        <li>
+          <div class="hover-card group relative p-4 rounded-xl border border-transparent lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+            <h3 class="font-semibold text-slate-200 text-base flex items-baseline">Administrador de producción en Vercel y AWS <svg class="ml-1 h-4 w-4" fill="currentColor"><use href="#arrow"/></svg></h3>
+            <p class="text-sm text-sky-400 mt-1"></p>
+            <ul class="mt-2 text-sm leading-normal text-slate-400 space-y-1">
+              <li>– Elaboración de back-end.</li>
+              <li>– Elaboración de base de datos con SQL en Supabase.</li>
+              <li>– Elaboración de conexiones con servicios externos.</li>
+            </ul>
+            <ul class="mt-3 flex flex-wrap gap-1.5"><li class="pill">Vercel</li><li class="pill">AWS</li><li class="pill">Supabase</li></ul>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="projects" class="scroll-mt-16 lg:scroll-mt-24">
+      <h2 class="title-serif text-3xl text-white mb-4 lg:sr-only">Proyectos</h2>
+      <ul class="group/list space-y-12">
+        <li>
+          <div class="hover-card group relative grid gap-4 p-4 rounded-xl border border-transparent sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+            <div class="sm:col-span-2 rounded-lg border-2 border-slate-700/80 bg-slate-900 relative aspect-video flex items-center justify-center group-hover:border-spidey-neon transition-colors">
+              <div class="absolute inset-0 rounded-lg bg-gradient-to-tr from-spidey-black via-slate-900 to-spidey-red/20"></div>
+              <span class="relative text-xs font-bold text-spidey-neon">Pendiente</span>
+            </div>
+            <div class="sm:col-span-6"><h3 class="font-semibold text-slate-200 text-base">Proyecto pendiente</h3><p class="mt-2 text-sm text-slate-400">Aquí irá el primer proyecto.</p></div>
+          </div>
+        </li>
+        <li>
+          <div class="hover-card group relative grid gap-4 p-4 rounded-xl border border-transparent sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+            <div class="sm:col-span-2 rounded-lg border-2 border-slate-700/80 bg-slate-900 relative aspect-video flex items-center justify-center group-hover:border-spidey-neon transition-colors">
+              <div class="absolute inset-0 rounded-lg bg-gradient-to-tr from-slate-950 via-slate-900 to-sky-950/40"></div>
+              <span class="relative text-xs font-bold text-sky-400">Pendiente</span>
+            </div>
+            <div class="sm:col-span-6"><h3 class="font-semibold text-slate-200 text-base">Proyecto pendiente</h3><p class="mt-2 text-sm text-slate-400">Aquí irá el segundo proyecto.</p></div>
+          </div>
+        </li>
+        <li>
+          <div class="hover-card group relative grid gap-4 p-4 rounded-xl border border-transparent sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+            <div class="sm:col-span-2 rounded-lg border-2 border-slate-700/80 bg-slate-900 relative aspect-video flex items-center justify-center group-hover:border-spidey-neon transition-colors">
+              <div class="absolute inset-0 rounded-lg bg-gradient-to-tr from-pink-950/30 via-slate-900 to-spidey-blue/20"></div>
+              <span class="relative text-xs font-bold text-pink-400">Pendiente</span>
+            </div>
+            <div class="sm:col-span-6"><h3 class="font-semibold text-slate-200 text-base">Proyecto pendiente</h3><p class="mt-2 text-sm text-slate-400">Aquí irá el tercer proyecto.</p></div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Estudios, habilidades e idiomas -->
+    <section id="education" class="scroll-mt-16 lg:scroll-mt-24">
+      <h2 class="title-serif text-3xl text-white mb-4">Datos académicos</h2>
+      <div class="hover-card p-4 rounded-xl border border-transparent">
+        <h3 class="font-semibold text-slate-200 text-base">Colegio Español Padre Arrupe</h3>
+        <p class="mt-1 text-sm text-slate-400">Bachillerato técnico en Desarrollo de Software · Actual</p>
+      </div>
+
+      <h2 class="title-serif text-3xl text-white mt-14 mb-4">Habilidades</h2>
+      <div class="grid gap-8 sm:grid-cols-2 p-4">
+        <div>
+          <ul class="space-y-1 text-[15px] text-slate-400">
+            <li>Buena comunicación</li><li>Gestión de grandes equipos</li><li>Resolución de problemas</li>
+          </ul>
+          <p class="mt-4 mb-2 text-sm text-slate-300 font-semibold">Dominio de tecnologías</p>
+          <ul class="flex flex-wrap gap-1.5">
+            <li class="pill">PHP</li><li class="pill">ASP.NET</li><li class="pill">C++</li><li class="pill">C#</li>
+            <li class="pill">JS</li><li class="pill">Git y GitHub</li><li class="pill">SQL en Supabase</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="title-serif text-2xl text-white mb-2">Idiomas</h3>
+          <p class="text-sm text-slate-400"><strong class="block text-slate-200">Inglés</strong>Nativo</p>
+          <p class="mt-3 text-sm text-slate-400"><strong class="block text-slate-200">Español</strong>Nivel alto</p>
+          <p class="mt-3 text-sm text-slate-400"><strong class="block text-slate-200">Japonés</strong>Nivel básico</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="max-w-md pb-16 text-xs text-slate-500 sm:pb-0">
+      <p>Hecho con cariño con Tailwind CSS y JavaScript. Tipografías: <span class="text-slate-300 font-semibold">DM Serif Display</span> y <span class="text-slate-300 font-semibold">Open Sans</span>.</p>
+      <p class="mt-3 text-spidey-red">Muchas gracias por visitar mi web :o</p>
+    </footer>
+  </main>
+</div>
+</div>
+
+<div class="yt-hidden" aria-hidden="true"><div id="yt-player"></div></div>
+
+<script src="script.js"></script>
+</body>
+</html>

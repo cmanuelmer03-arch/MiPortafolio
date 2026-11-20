@@ -1,0 +1,66 @@
+/* ---------- Fondo y base ---------- */
+body {
+  background-color: #07090e;
+  color: #94a3b8;
+  background-image:
+    radial-gradient(circle at 18% 18%, rgba(226, 54, 54, 0.07) 0%, transparent 45%),
+    radial-gradient(circle at 82% 82%, rgba(14, 165, 233, 0.05) 0%, transparent 45%),
+    linear-gradient(rgba(255, 255, 255, 0.012) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.012) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 56px 56px, 56px 56px;
+  background-attachment: fixed;
+}
+h1, h2.display, .title-serif { font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #07090e; }
+::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #ef233c; }
+
+/* ---------- Reproductor de vinilo ---------- */
+.vinyl-disc {
+  transition: transform 0.5s ease-out;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.85), inset 0 0 10px rgba(255, 255, 255, 0.15);
+}
+.is-playing .vinyl-disc { animation: spin 5s linear infinite; }
+.groove-rings {
+  background: repeating-radial-gradient(circle, #12141a 0, #12141a 2px, #1e2330 3px, #12141a 4px);
+}
+
+/* ---------- Navegación lateral ---------- */
+.nav-indicator { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+.nav-link.active .nav-indicator {
+  width: 3.5rem; background-color: #ef233c; box-shadow: 0 0 12px rgba(239, 35, 60, 0.6);
+}
+.nav-link.active .nav-text { color: #fff; font-weight: 700; }
+
+/* ---------- Tarjetas ---------- */
+.hover-card { transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease, background .25s ease; }
+.hover-card:hover {
+  border-color: rgba(239, 35, 60, 0.35);
+  background-color: rgba(15, 23, 42, 0.75);
+  box-shadow: 0 12px 30px -10px rgba(226, 54, 54, 0.12);
+}
+.pill {
+  display: flex; align-items: center; padding: 0.25rem 0.75rem; border-radius: 9999px;
+  font-size: 0.75rem; font-weight: 600; line-height: 1.25rem;
+  color: #ff1a40; background: rgba(226, 54, 54, 0.1); border: 1px solid rgba(226, 54, 54, 0.2);
+}
+
+/* ---------- Traje de Miles ---------- */
+body.miles-suit {
+  background-color: #050608;
+  background-image:
+    radial-gradient(circle at 18% 18%, rgba(255, 26, 64, 0.1) 0%, transparent 45%),
+    radial-gradient(circle at 82% 82%, rgba(226, 54, 54, 0.08) 0%, transparent 45%),
+    linear-gradient(rgba(255, 26, 64, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 26, 64, 0.02) 1px, transparent 1px);
+}
+
+/* ---------- Columna izquierda: sin barra visible y compacta en pantallas bajas ---------- */
+.sidebar { scrollbar-width: none; }
+.sidebar::-webkit-scrollbar { display: none; }
+@media (max-height: 780px) { .intro { display: none; } }
+
+/* ---------- Iframe de YouTube (oculto, solo se usa el audio) ---------- */
+.yt-hidden { position: fixed; left: -9999px; top: 0; width: 200px; height: 200px; overflow: hidden; }
